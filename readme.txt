@@ -47,3 +47,14 @@ git branch --set-upstream <name> <name>指定本地分支与远程分支的链接
 没有冲突或者解决掉冲突后，再用git push origin branch-name推送就能成功！
 如果git pull提示“no tracking information”，则说明本地分支和远程分支的链接关系没有创建，
 用命令git branch --set-upstream <name> <name>
+标签：
+git tag <name> 创建标签
+git tag 查看所有标签
+git tag <name>  <commit id>  创建历史版本标签
+git tag -a <tagname> -m "blablabla..."可以指定标签信息；
+git tag -s <tagname> -m "blablabla..."可以用PGP签名标签；
+git show <tagname>查看标签信息
+git push origin <tagname>可以推送一个本地标签；
+git push origin --tags可以推送全部未推送过的本地标签；
+git tag -d <tagname>可以删除一个本地标签；
+git push origin :refs/tags/<tagname>可以删除一个远程标签。
